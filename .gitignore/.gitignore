@@ -1,0 +1,17 @@
+git remote add origin https://github.com/jwalkerers/jwalkerers.git
+git branch -M main
+git push -u origin mainecho "# jwalkerers" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/jwalkerers/jwalkerers.git
+git push -u origin mainNIrpiOmrTkfS53wGsFZKMUPSPNIrpiOmrTkfS53wGsFZKMUPSP# Move all experiments with a particular tag:
+>>> from comet_ml.query import Tag
+>>> from comet_ml import API
+>>> api = API() # assumes configured with api_key
+>>> experiments = api.query("workspace", "project", Tag("My tag"))
+>>> api.move_experiments([e.id for e in experiments],
+  "workspace",
+  "other-project")
+
